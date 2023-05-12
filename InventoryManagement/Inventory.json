@@ -1,0 +1,19 @@
+{
+  "TypesOfRice": [
+    {
+      "name": "Basumathi",
+      "weight": 3,
+      "price": 120
+    },
+    {
+      "name": "Bullet",
+      "weight": 4,
+      "price": 100
+    },
+    {
+      "name": "Rice1",
+      "weight": 8,
+      "price": 80
+    }
+  ]
+}
