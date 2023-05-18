@@ -7,18 +7,18 @@
             Console.WriteLine("Object Oriented Programs");
             Console.WriteLine("Stock Transction Stack");
 
-            var stockStack = new StockTransactionStack();
+            var transactionQueue = new StockTransactionQueue();
 
             //Add company purchase and sale detail
-            stockStack.Push(new StockTransaction("TATA", TransactionType.Purchase));
-            stockStack.Push(new StockTransaction("Infosys", TransactionType.Purchase));
-            stockStack.Push(new StockTransaction("Reliance", TransactionType.Sale));
+            transactionQueue.Enqueue("Transaction 1");
+            transactionQueue.Enqueue("Transaction 2");
+            transactionQueue.Enqueue("Transaction 3");
 
-            stockStack.DisplayTransactions();
+            transactionQueue.DisplayTransactions();
 
             //Print the result and show transaction details
-            var lastTransaction = stockStack.Pop();
-            Console.WriteLine($"Popped transaction: Stock: {lastTransaction.Symbol}, Transaction Type: {lastTransaction.Type}");
+            var lastTransaction = transactionQueue.Dequeue();
+            Console.WriteLine($"Dequeued transaction: Stock: {lastTransaction.Company}, DateTime Type: {lastTransaction.TransactionDateTime}");
         }
     }
 }

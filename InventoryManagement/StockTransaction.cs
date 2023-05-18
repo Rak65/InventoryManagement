@@ -8,18 +8,13 @@ namespace InventoryManagement
 {
     public class StockTransaction
     {
-        public string Symbol { get; set; }
-        public TransactionType Type { get; set; }
+        public string Company { get; set; }
+        public DateTime TransactionDateTime { get; set; }
 
-        public StockTransaction(string symbol, TransactionType type)
+        public StockTransaction(string company)
         {
-            Symbol = symbol;
-            Type = type;
+            TransactionDateTime = DateTime.Now;
+            Company = Company;
         }
-    }
-    public enum TransactionType
-    {
-        Purchase,
-        Sale
     }
 }
