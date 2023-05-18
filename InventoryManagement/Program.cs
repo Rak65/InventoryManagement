@@ -5,28 +5,20 @@
         public static void Main(string[] args)
         {
             Console.WriteLine("Object Oriented Programs");
-            Console.WriteLine("Stock LinkedList");
+            Console.WriteLine("Stock Transction Stack");
 
-            LinkedListStock sharesList = new LinkedListStock();
+            var stockStack = new StockTransactionStack();
 
-            // Adding company shares
-            Console.WriteLine("We get shares data of companies: ");
-            var share1 = new CompanyShares("TATA", 20, 100);
-            var share2 = new CompanyShares("Infosys", 50, 200);
-            var share3 = new CompanyShares("Wipro", 40, 300);
+            //Add company purchase and sale detail
+            stockStack.Push(new StockTransaction("TATA", TransactionType.Purchase));
+            stockStack.Push(new StockTransaction("Infosys", TransactionType.Purchase));
+            stockStack.Push(new StockTransaction("Reliance", TransactionType.Sale));
 
+            stockStack.DisplayTransactions();
 
-            sharesList.Add(share1);
-            sharesList.Add(share2);
-            sharesList.Add(share3);
-            sharesList.Display();
-
-            // Removing company shares
-            sharesList.Remove(share1);
-            Console.WriteLine("\nAfter removed data: \n");
-
-            // Printing the remaining shares
-            sharesList.Display();
+            //Print the result and show transaction details
+            var lastTransaction = stockStack.Pop();
+            Console.WriteLine($"Popped transaction: Stock: {lastTransaction.Symbol}, Transaction Type: {lastTransaction.Type}");
         }
     }
 }
