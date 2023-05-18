@@ -1,19 +1,53 @@
 {
-  "TypesOfRice": [
+  "TypeOfRice": [
     {
-      "name": "Basumathi",
-      "weight": 3,
-      "price": 120
+      "Name": "Basmati",
+      "Weight": 5,
+      "Price": 20
     },
     {
-      "name": "Bullet",
-      "weight": 4,
-      "price": 100
+      "Name": "Parboiled Rice",
+      "Weight": 15,
+      "Price": 40
     },
     {
-      "name": "Rice1",
-      "weight": 8,
-      "price": 80
+      "Name": "White Rice",
+      "Weight": 20,
+      "Price": 200
+    }
+  ],
+  "TypeOfWheats": [
+    {
+      "Name": "Durum",
+      "Weight": 5,
+      "Price": 10
+    },
+    {
+      "Name": "Emmer",
+      "Weight": 15,
+      "Price": 30
+    },
+    {
+      "Name": "Spelt",
+      "Weight": 10,
+      "Price": 20
+    }
+  ],
+  "TypeOfPulses": [
+    {
+      "Name": "Dal",
+      "Weight": 5,
+      "Price": 10
+    },
+    {
+      "Name": "Lentil",
+      "Weight": 15,
+      "Price": 30
+    },
+    {
+      "Name": "Mung dal",
+      "Weight": 10,
+      "Price": 20
     }
   ]
 }
