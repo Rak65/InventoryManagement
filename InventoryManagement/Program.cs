@@ -5,31 +5,28 @@
         public static void Main(string[] args)
         {
             Console.WriteLine("Object Oriented Programs");
-            Console.WriteLine("Stock Account Management");
+            Console.WriteLine("Stock LinkedList");
 
-            Console.Write("Enter number of stocks: ");
-            int numStocks = Convert.ToInt32(Console.ReadLine());
+            LinkedListStock sharesList = new LinkedListStock();
 
-            StockPortfolio stockPortfolio = new StockPortfolio();
+            // Adding company shares
+            Console.WriteLine("We get shares data of companies: ");
+            var share1 = new CompanyShares("TATA", 20, 100);
+            var share2 = new CompanyShares("Infosys", 50, 200);
+            var share3 = new CompanyShares("Wipro", 40, 300);
 
-            for (int i = 0; i < numStocks; i++)
-            {
-                Console.WriteLine("Stocks: " + (i + 1));
-                Console.Write("Enter Stock name: ");
-                string name = Console.ReadLine();
-                Console.Write("Enter Number of share: ");
-                int numOfShares = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Enter share price: ");
-                double sharePrice = Convert.ToDouble(Console.ReadLine());
 
-                Stock stock = new Stock();
-                stock.Name = name;
-                stock.NumOfShares = numOfShares;
-                stock.SharePrice = sharePrice;
+            sharesList.Add(share1);
+            sharesList.Add(share2);
+            sharesList.Add(share3);
+            sharesList.Display();
 
-                stockPortfolio.AddStock(stock);
-            }
-            stockPortfolio.StockReport();
+            // Removing company shares
+            sharesList.Remove(share1);
+            Console.WriteLine("\nAfter removed data: \n");
+
+            // Printing the remaining shares
+            sharesList.Display();
         }
     }
 }
